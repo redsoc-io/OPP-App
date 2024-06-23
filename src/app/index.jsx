@@ -3,6 +3,7 @@ import ScreenWrapper from "../components/ScreenWrapper";
 import { useQuery } from "@tanstack/react-query";
 import ProxyItem from "../components/ProxyItem";
 import Icon from "react-native-vector-icons/FontAwesome";
+import { StatusBar } from 'expo-status-bar';
 
 export default function index() {
   const { isLoading, isRefetching, error, data, refetch } = useQuery({
@@ -24,23 +25,23 @@ export default function index() {
           </View>
         </View>
       )}
-      <View className="bg-white rounded-3xl p-5">
+      <View className="bg-gray-800 rounded-3xl p-5">
         <View className="flex justify-between items-center flex-row mb-4">
           <View className="">
-            <Text className="font-black tracking-wide text-2xl">
+            <Text className="font-black text-white tracking-wide text-2xl">
               Latest Proxies
             </Text>
           </View>
           <View className="">
             <TouchableOpacity className="" onPress={refetch}>
-              <Icon name="refresh" size={22} color="black" />
+              <Icon name="refresh" size={22} color="white" />
             </TouchableOpacity>
           </View>
         </View>
-        <View>
+        <View >
           {error && <Text>Error: {error.message}</Text>}
           {data && (
-            <View>
+            <View className="">
               {data.map((proxy) => (
                 <ProxyItem data={proxy} key={`${proxy.url}-proxy-item`} />
               ))}

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "open-proxy-project",
+    "name": "OPP",
     "slug": "open-proxy-project",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,16 +8,16 @@
     "scheme": "opp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./src/assets/images/splash.png",
+      "image":"./src/assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./src/assets/images/adaptive-icon.png",
+        "foregroundImage": "./src/assets/images/icon.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.redsoc.opp"
@@ -25,7 +25,7 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./src/assets/images/favicon.png"
+      "favicon": "./src/assets/images/icon.png"
     },
     "plugins": [
       "expo-router"
@@ -40,6 +40,7 @@
       "eas": {
         "projectId": "164b6c62-df23-44a7-bf62-8e51b5ab59b5"
       }
-    }
+    },
+    "owner": "redsoc"
   }
 }
